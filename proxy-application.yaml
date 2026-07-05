@@ -1,0 +1,4 @@
+payload:
+  - PROCESS-NAME,Discord.exe
+  - PROCESS-NAME,DiscordSystemHelper.exe
+  - PROCESS-NAME,Telegram.exe
