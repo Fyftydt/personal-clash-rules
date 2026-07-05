@@ -1,0 +1,10 @@
+# STEAM代理加速
+#  Steam 商店/聊天代理
+#  Steam 图片/工坊代理
+payload:
+  - DOMAIN-SUFFIX,steam-chat.com
+  - DOMAIN-SUFFIX,steamcommunity.com
+  - DOMAIN-SUFFIX,steampowered.com
+  - DOMAIN-SUFFIX,steamstatic.com
+  - DOMAIN-SUFFIX,steamusercontent.com
+
