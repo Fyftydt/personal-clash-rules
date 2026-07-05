@@ -1,0 +1,15 @@
+payload:
+  - PROCESS-NAME,TslGame.exe
+  - PROCESS-NAME,TslGame_BE.exe
+  - PROCESS-NAME,BEService.exe
+  - PROCESS-NAME,ExecPubg.exe
+  - PROCESS-NAME,zksvc.exe
+  - PROCESS-NAME,ForzaHorizon4.exe
+  - PROCESS-NAME,ForzaHorizon5.exe
+  - PROCESS-NAME,ForzaHorizon6.exe
+  - PROCESS-NAME,EAAntiCheat.GameServiceLauncher.exe
+  - PROCESS-NAME,EAAntiCheat.Installer.exe
+  - PROCESS-NAME,EAAntiCheat.GameService.exe
+  - PROCESS-NAME,bf6.exe
+  - PROCESS-NAME,EpicOnlineServicesInstaller.exe
+  - PROCESS-NAME,ReadyOrNot.exe
