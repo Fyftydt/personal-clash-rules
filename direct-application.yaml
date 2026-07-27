@@ -1,4 +1,6 @@
 payload:
   - PROCESS-NAME,left4dead2.exe
   - PROCESS-NAME,cs2.exe
-
+  - PROCESS-NAME,WeChatStore.exe
+  - PROCESS-NAME,WeChatWeb.exe
+  - PROCESS-NAME,WeChat.exe
