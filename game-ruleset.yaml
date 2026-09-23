@@ -14,3 +14,4 @@ payload:
   - PROCESS-NAME,bf6.exe
   - PROCESS-NAME,EpicOnlineServicesInstaller.exe
   - PROCESS-NAME,ReadyOrNot.exe
+  - PROCESS-NAME,ReadyOrNotSteam-Win64-Shipping.exe
