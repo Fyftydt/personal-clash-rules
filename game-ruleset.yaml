@@ -1,5 +1,6 @@
 payload:
   - DOMAIN-SUFFIX,nexon.com
+  - DOMAIN-SUFFIX,magical-girl-celesphonia-extension.amemei9f-lists.top
   - PROCESS-NAME,TslGame.exe
   - PROCESS-NAME,TslGame_BE.exe
   - PROCESS-NAME,BEService.exe
@@ -14,4 +15,4 @@ payload:
   - PROCESS-NAME,bf6.exe
   - PROCESS-NAME,EpicOnlineServicesInstaller.exe
   - PROCESS-NAME,ReadyOrNot.exe
-  - PROCESS-NAME,ReadyOrNotSteam-Win64-Shipping.exe
+  - PROCESS-NAME,ReadyOrNotSteam-Win64-Shipping.exe 
