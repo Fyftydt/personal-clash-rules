@@ -1,0 +1,311 @@
+[YAML]
+profile:
+  store-selected: true
+  store-fake-ip: true
+udp: true
+tcp-concurrent: true
+tcp-fast-open: true
+proxy-groups!:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - 🇯🇵 日本优选
+  - 🇭🇰 香港优选
+  - DIRECT
+  include-all: true
+- name: 🇯🇵 日本优选
+  type: select
+  filter: (?i)JP|日本|Japan
+  url: https://www.apple.com/library/test/success.html
+  interval: 300
+  tolerance: 50
+  include-all: true
+- name: 🇭🇰 香港优选
+  type: select
+  filter: (?i)HK|香港|HongKong|Hong Kong
+  url: https://www.apple.com/library/test/success.html
+  interval: 300
+  tolerance: 50
+  include-all: true
+- name: 🎮 GAME
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  include-all: true
+- name: 🐋 DeepSeek
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  include-all: true
+- name: 🎵 Spotify
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  include-all: true
+- name: 🔍 Bing
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  include-all: true
+- name: 🔍 YAHOO&AOL
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  include-all: true
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  include-all: true
+- name: 🪟 微软服务
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  include-all: true
+- name: ☁️ iCloud
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  include-all: true
+- name: ☁️ OneDrive
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  include-all: true
+- name: 🚀 Speedtest
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  include-all: true
+- name: 🎮 Steam CN
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  include-all: true
+- name: 🎮 Steam 商店/聊天/工坊
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  include-all: true
+- name: 🚫 广告拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+rule-providers!:
+  reject:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.yaml
+  direct:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./ruleset/direct.yaml
+  proxy:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./ruleset/proxy.yaml
+  gfw:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    path: ./ruleset/gfw.yaml
+  microsoft:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
+    path: ./ruleset/microsoft.yaml
+  apple:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml
+    path: ./ruleset/apple.yaml
+  icloud:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/iCloud/iCloud_No_Resolve.yaml
+    path: ./ruleset/icloud.yaml
+  onedrive:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/OneDrive/OneDrive_No_Resolve.yaml
+    path: ./ruleset/onedrive.yaml
+  github:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml
+    path: ./ruleset/github.yaml
+  aol:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/AOL/AOL_No_Resolve.yaml
+    path: ./ruleset/aol.yaml
+  yahoo:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Fyftydt/personal-clash-rules/refs/heads/main/yahoo.yaml
+    path: ./ruleset/yahoo.yaml
+  bing:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Bing/Bing_No_Resolve.yaml
+    path: ./ruleset/bing.yaml
+  spotify:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Spotify/Spotify_No_Resolve.yaml
+    path: ./ruleset/spotify.yaml
+  deepseek:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/deepseek.yaml
+    path: ./ruleset/deepseek.yaml
+  telegram:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml
+    path: ./ruleset/telegram.yaml
+  steam_direct:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/steam_direct.yaml
+    path: ./ruleset/steam_direct.yaml
+  steam_proxy:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/steam_proxy.yaml
+    path: ./ruleset/steam_proxy.yaml
+  applications:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    path: ./ruleset/applications.yaml
+  proxy_application:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/proxy-application.yaml
+    path: ./ruleset/proxy_application.yaml
+  direct_application:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/direct-application.yaml
+    path: ./ruleset/direct_application.yaml
+  game_ruleset:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/game-ruleset.yaml
+    path: ./ruleset/game_ruleset.yaml
+  proxy_website:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/proxy_website.yaml
+    path: ./ruleset/proxy_website.yaml
+  direct_website:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/direct_website.yaml
+    path: ./ruleset/direct_website.yaml
+  private:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./ruleset/private.yaml
+  tld-not-cn:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+  cncidr:
+    type: http
+    behavior: ipcidr
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+  lancidr:
+    type: http
+    behavior: ipcidr
+    interval: 86400
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+rules!:
+- GEOSITE,category-ads-all,🚫 广告拦截
+- RULE-SET,reject,🚫 广告拦截
+- GEOSITE,private,DIRECT
+- GEOIP,lan,DIRECT,no-resolve
+- RULE-SET,lancidr,DIRECT,no-resolve
+- RULE-SET,private,DIRECT
+- RULE-SET,github,🚀 节点选择
+- RULE-SET,telegram,🚀 节点选择
+- RULE-SET,proxy_website,🚀 节点选择
+- RULE-SET,direct_website,DIRECT
+- RULE-SET,applications,DIRECT
+- RULE-SET,proxy_application,🚀 节点选择
+- RULE-SET,direct_application,DIRECT
+- RULE-SET,game_ruleset,🎮 GAME
+- RULE-SET,steam_direct,🎮 Steam CN
+- RULE-SET,steam_proxy,🎮 Steam 商店/聊天/工坊
+- RULE-SET,spotify,🎵 Spotify
+- RULE-SET,deepseek,🐋 DeepSeek
+- RULE-SET,aol,🔍 YAHOO&AOL
+- RULE-SET,yahoo,🔍 YAHOO&AOL
+- RULE-SET,bing,🔍 Bing
+- RULE-SET,onedrive,☁️ OneDrive
+- RULE-SET,icloud,☁️ iCloud
+- RULE-SET,apple,🍎 苹果服务
+- GEOSITE,apple-cn,🍎 苹果服务
+- RULE-SET,microsoft,🪟 微软服务
+- DOMAIN-SUFFIX,speedtest.net,🚀 Speedtest
+- GEOSITE,cn,DIRECT
+- GEOIP,CN,DIRECT,no-resolve
+- RULE-SET,cncidr,DIRECT,no-resolve
+- RULE-SET,direct,DIRECT
+- GEOSITE,geolocation-!cn,🚀 节点选择
+- RULE-SET,proxy,🚀 节点选择
+- RULE-SET,gfw,🚀 节点选择
+- RULE-SET,tld-not-cn,🚀 节点选择
+- MATCH,🐟 漏网之鱼
