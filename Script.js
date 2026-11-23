@@ -91,6 +91,7 @@ function main(config) {
     gfw: { type: "http", behavior: "domain", interval: 86400, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt", path: "./ruleset/gfw.yaml" },
  
     // 策略组
+    google: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Google/Google_No_Resolve.yaml", path: "./ruleset/google.yaml" },
     microsoft: { type: "http", behavior: "classical", interval: 86400, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml", path: "./ruleset/microsoft.yaml" },
     apple: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml", path: "./ruleset/apple.yaml" },
     icloud: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/iCloud/iCloud_No_Resolve.yaml", path: "./ruleset/icloud.yaml" },
@@ -112,6 +113,7 @@ function main(config) {
     game_ruleset: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/game-ruleset.yaml", path: "./ruleset/game_ruleset.yaml" },
 
     // 网站
+    reject_website: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/reject_website.yaml", path: "./ruleset/reject_website.yaml" },
     proxy_website: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/proxy_website.yaml", path: "./ruleset/proxy_website.yaml" },
     direct_website: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/direct_website.yaml", path: "./ruleset/direct_website.yaml" },
 
@@ -147,13 +149,16 @@ function main(config) {
     "RULE-SET,lancidr,DIRECT,no-resolve",         
     "RULE-SET,private,DIRECT", 
 
-    // 必须代理  
-    "RULE-SET,github,🚀 节点选择",
-    "RULE-SET,telegram,🚀 节点选择",  
-
     // 网站
+    "RULE-SET,reject_website,🚫 广告拦截",
     "RULE-SET,proxy_website,🚀 节点选择",
     "RULE-SET,direct_website,DIRECT",
+
+    // 必须代理  
+    "RULE-SET,github,🚀 节点选择",
+    "RULE-SET,telegram,🚀 节点选择",
+    "RULE-SET,google,🚀 节点选择",
+    "GEOSITE,google,🚀 节点选择",
 
     // 应用程序
     "RULE-SET,applications,DIRECT", 
