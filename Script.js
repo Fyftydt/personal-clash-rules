@@ -161,9 +161,9 @@ function main(config) {
     "GEOSITE,google,🚀 节点选择",
 
     // 应用程序
-    "RULE-SET,applications,DIRECT", 
     "RULE-SET,proxy_application,🚀 节点选择",
     "RULE-SET,direct_application,DIRECT",
+    "RULE-SET,applications,DIRECT", 
 
     // GAME Ruleset
     "RULE-SET,game_ruleset,🎮 GAME",
