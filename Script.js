@@ -108,9 +108,9 @@ function main(config) {
 
     // 常用软件
     applications: { type: "http", behavior: "classical", interval: 86400, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt", path: "./ruleset/applications.yaml" },
-    proxy_application: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/proxy-application.yaml", path: "./ruleset/proxy_application.yaml" },
-    direct_application: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/direct-application.yaml", path: "./ruleset/direct_application.yaml" },
-    game_ruleset: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/game-ruleset.yaml", path: "./ruleset/game_ruleset.yaml" },
+    proxy_application: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/proxy_application.yaml", path: "./ruleset/proxy_application.yaml" },
+    direct_application: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/direct_application.yaml", path: "./ruleset/direct_application.yaml" },
+    game_ruleset: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/game_ruleset.yaml", path: "./ruleset/game_ruleset.yaml" },
 
     // 网站
     reject_website: { type: "http", behavior: "classical", interval: 86400, url: "https://github.com/Fyftydt/personal-clash-rules/raw/refs/heads/main/reject_website.yaml", path: "./ruleset/reject_website.yaml" },
